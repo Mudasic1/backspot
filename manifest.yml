@@ -1,0 +1,35 @@
+modules:
+  jira:issuePanel:
+    - key: backspot-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: backspot
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+
+  jira:projectPage:
+    - key: backspot-project-page
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: backspot
+      icon: https://developer.atlassian.com/platform/forge/images/project-page-icon.svg
+
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+permissions:
+  scopes:
+    - read:jira-work
+    - storage:app
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/0e0f92ed-2594-4179-b113-85fd762f5f4e
