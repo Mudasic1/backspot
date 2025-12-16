@@ -54,34 +54,6 @@ Score =
 | **3-5** | Friction       | Discuss in standup.  |
 | **6+**  | blocked        | Retrospective topic. |
 
-## 🛠️ Installation & Setup
-
-1.  **Clone the repository**:
-
-    ```bash
-    git clone https://github.com/your-username/backspot.git
-    cd backspot
-    ```
-
-2.  **Install dependencies**:
-
-    ```bash
-    npm install
-    ```
-
-3.  **Deploy to Jira**:
-    ```bash
-    forge deploy
-    forge install
-    ```
-
-## 🏗️ Architecture
-
-Backspot is built with a modular "Service-Resolver" pattern:
-
-- **`src/services/`**: Core logic for analyzing issues and projects.
-- **`src/utils/`**: Algorithms for loop detection and time tracking.
-- **`src/frontend/`**: Native Forge UI Kit components (`IssuePanel`, `ProjectPage`).
 
 ## 🏆 Codegeist 2025
 
